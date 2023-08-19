@@ -1,4 +1,4 @@
-# import csear
+import cesar
 
 # Bienvenido
 
@@ -27,14 +27,9 @@
 
 # INSTRUCCIONES
 
-# Debes resolver 3 retos, luego de realizarlos los vas a guardar en la variable
-# codigo_ganador = str(resultado_reto3) + str(resultado_reto1) + str(resultado_reto2)
-# convirtiéndolos en cadenas y luego concatenándolos juntos en la variable codigo_ganador. 
-
-
-# Cuando lo imprimas, te daras cuenta que en la variable codigo_ganador guarda un codigo, pasa este codigo como 
-# parametro en la funcion traduccion_cesar que se encueentra en el modulo cesar.py 
-# Esta sera el codigo con el que ganaras el reto!
+# Debes resolver 3 retos, luego de realizarlos, llamalos en la funcion main.py en el orden en el que se deben imprimir es RETO 3, RETO 1, RETO 2
+# Esto te dara un codigo, pasa este codigo como parametro en la funcion traduccion_cesar que se encueentra en el modulo cesar.py 
+# Esta sera el codigo ganador
 
 # Deja la respuesta en la parte final del codigo de esta manera
 
@@ -43,44 +38,60 @@
 
 
 
-# RETO NUMERO 1
+    # RETO NUMERO 1
 
 
-# En este ejercicio, debes implementar una función llamada clasificacion_de_Numeros que tome un número como argumento y
-# lo clasifique en diferentes categorías según ciertos rangos. Los rangos y sus categorías son los siguientes categorias 
-# y le pases por parametro el numero 40 cuando llames el metodo en la seccion LLAMANDO METODOS
+    # En este ejercicio, debes implementar una función llamada clasificacion_de_Numeros que tome un número como argumento y
+    # lo clasifique en diferentes categorías según ciertos rangos. Los rangos y sus categorías son los siguientes categorias 
+    # y le pases por parametro el numero 40
 
-# Si el número está entre 1 y 10 (incluyendo ambos), la categoría es "nqja".
-# Si el número está entre 11 y 20 (incluyendo ambos), la categoría es "lqj".
-# Si el número está entre 21 y 30 (incluyendo ambos), la categoría es "awqas".
-# Si el número está entre 31 y 40 (incluyendo ambos), la categoría es "b Kdn".
-# Si el número está entre 41 y 50 (incluyendo ambos), la categoría es "la d".
-# Si el número está entre 51 y 60 (incluyendo ambos), la categoría es "Kdss".
-# Si el número está entre 61 y 70 (incluyendo ambos), la categoría es "drh sf".
-# Si el número está entre 71 y 80 (incluyendo ambos), la categoría es "qfdgwf".
-# Si el número está entre 81 y 90 (incluyendo ambos), la categoría es "jgho".
-# Si el número está entre 91 y 100 (incluyendo ambos), la categoría es "dvnx".
-# Si el número no está en ninguno de estos rangos, la categoría es "Número fuera de rango".
+    # Si el número está entre 1 y 10 (incluyendo ambos), la categoría es "nqja".
+    # Si el número está entre 11 y 20 (incluyendo ambos), la categoría es "lqj".
+    # Si el número está entre 21 y 30 (incluyendo ambos), la categoría es "awqas".
+    # Si el número está entre 31 y 40 (incluyendo ambos), la categoría es "b Kdn".
+    # Si el número está entre 41 y 50 (incluyendo ambos), la categoría es "la d".
+    # Si el número está entre 51 y 60 (incluyendo ambos), la categoría es "Kdss".
+    # Si el número está entre 61 y 70 (incluyendo ambos), la categoría es "drh sf".
+    # Si el número está entre 71 y 80 (incluyendo ambos), la categoría es "qfdgwf".
+    # Si el número está entre 81 y 90 (incluyendo ambos), la categoría es "jgho".
+    # Si el número está entre 91 y 100 (incluyendo ambos), la categoría es "dvnx".
+    # Si el número no está en ninguno de estos rangos, la categoría es "Número fuera de rango".
 
 
-def clasificacion_de_Numeros(numero):
+def clasificacion_de_numeros(numero):
     if 1 <= numero <= 10:
         return "nqja"
-    # elif 11 <= numero <= 20:
-    #     return ...
-
-    # ...
-
+    elif 11 <= numero <= 20:
+        return "lqj"
+    elif 21 <= numero <= 30:
+        return "awqas"
+    elif 31 <= numero <= 40:
+        return "b Kdn"
+    elif 41 <= numero <= 50:
+        return "la d"
+    elif 51 <= numero <= 60:
+        return "Kdss"
+    elif 61 <= numero <= 70:
+        return "drh sf"
+    elif 71 <= numero <= 80:
+        return "qfdgwf"
+    elif 81 <= numero <= 90:
+        return "jgho"
+    elif 91 <= numero <= 100:
+        return "dvnx"
     else:
         return "Número fuera de rango"
 
 
+
+
+
 # RETO NUMERO 2
 
-# Toma una lista de lenguajes de programacion, analiza los nombres en la lista y cuenta la cantidad total de letras en los 
+# Toma una lista de lenguajes, analiza los nombres en la lista y cuenta la cantidad total de letras en los 
 # nombres que tienen más de 3 caracteres y cuyo cuarto carácter es "a". 
 
-# Los lenguaJes son estos  Python C, Java, PHP, Rubi, JavaScript
+# Los lenguaes son estos  Python C, Java, PHP, Rubi, JavaScript
 
 # Por ejemplo si las letras que cumplieran estas caracteristicas fueran Helado, y Vino, entonces 
 # las letras totales serian Helado = 6 + Vino = 4 entonces el total seria 10
@@ -88,14 +99,16 @@ def clasificacion_de_Numeros(numero):
 # Por ultimo, debe devolver el metodo clasificacion_de_numeros pero pasandole por parametro las letras_totales
 
 
-lenguajes = ["Vainilla", "Chocolate", "Fresa", "Mango", "Menta", "Café"]
+lenguajes = ["Python", "C", "Java", "PHP", "Rubi", "JavaScript"]
 
 def analizar_nombres(lista):
     letras_totales = 0
     for nombre in lista:
-        if len(nombre) > 4 and nombre[4] == "j":
+        if len(nombre) > 3 and nombre[3] == "a":
             letras_totales += len(nombre)
-    #  clasificacion_de_Numeros(letras_totales)
+    return clasificacion_de_numeros(letras_totales)
+
+
 
 
 # RETO NUMERO 3
@@ -114,21 +127,18 @@ def analizar_nombres(lista):
 def imprimir_multiplos_de_tres(inicio, fin, paso):
      suma = 0
      for num in range(inicio, fin, paso):
-        ultimo_digito = 0 #...  
-        if ultimo_digito != 5:
-            suma -= num
-     return clasificacion_de_Numeros(int(suma))
-
-# LLAMANDO METODOS
+        ultimo_digito = num % 10  
+        if ultimo_digito != 6:
+            suma += num
+     return clasificacion_de_numeros(int(suma))
 
 def main():
-    resultado_reto1 = clasificacion_de_Numeros(?)
-    # resultado_reto3 = imprimir_multiplos_de_tres(3, 21, 3)
-    # resultado_reto2 = analizar_nombres(lenguajes)
-    # codigo_ganador = str(resultado_reto?) + str(resultado...
-    # print(cesar.traduccion_cesar(codigo_ganador))
+    resultado_reto1 = clasificacion_de_numeros(40)
+    resultado_reto3 = imprimir_multiplos_de_tres(3, 20, 3)
+    resultado_reto2 = analizar_nombres(lenguajes)
+    codigo_ganador = str(resultado_reto3) + str(resultado_reto1) + str(resultado_reto2)
+    print(cesar.traduccion_cesar(codigo_ganador))
 
 
 if __name__ == "__main__":
     main()
-
