@@ -1,7 +1,5 @@
-# import csear
-
 # Bienvenido
-
+import cesar
 # Crea una rama la cual tendra como nombre: [Tu nombre completo]
 
 # para esto ejecuta el comando 
@@ -63,16 +61,30 @@
 # Si el número no está en ninguno de estos rangos, la categoría es "Número fuera de rango".
 
 
-def clasificacion_de_Numeros(numero):
+def categorizar_numero(numero):
     if 1 <= numero <= 10:
         return "nqja"
-    # elif 11 <= numero <= 20:
-    #     return ...
-
-    # ...
-
+    elif 11 <= numero <= 20:
+        return "lqj"
+    elif 21 <= numero <= 30:
+        return "awqas"
+    elif 31 <= numero <= 40:
+        return "b Kdn"
+    elif 41 <= numero <= 50:
+        return "la d"
+    elif 51 <= numero <= 60:
+        return "Kdss"
+    elif 61 <= numero <= 70:
+        return "drh sf"
+    elif 71 <= numero <= 80:
+        return "qfdgwf"
+    elif 81 <= numero <= 90:
+        return "jgho"
+    elif 91 <= numero <= 100:
+        return "dvnx"
     else:
         return "Número fuera de rango"
+
 
 
 # RETO NUMERO 2
@@ -88,14 +100,28 @@ def clasificacion_de_Numeros(numero):
 # Por ultimo, debe devolver el metodo clasificacion_de_numeros pero pasandole por parametro las letras_totales
 
 
-lenguajes = ["Vainilla", "Chocolate", "Fresa", "Mango", "Menta", "Café"]
+
+
+lenguajes = ["Python C", "Java", "PHP", "Rubi", "JavaScript"]
+
+
+
 
 def analizar_nombres(lista):
-    letras_totales = 0
-    for nombre in lista:
-        if len(nombre) > 4 and nombre[4] == "j":
-            letras_totales += len(nombre)
-    #  clasificacion_de_Numeros(letras_totales)
+
+    lengujaes_val = []
+    for i in lenguajes:
+        if len(i) > 3:
+            if i[3] == "a":
+                lengujaes_val.append(i)
+        total = 0
+        for z in lengujaes_val:
+            
+            total += len(z)
+    
+    
+    categorizar_numero(total)
+analizar_nombres(lenguajes)
 
 
 # RETO NUMERO 3
@@ -111,24 +137,33 @@ def analizar_nombres(lista):
 # Si luego divides 753 por 10 (es decir, 753 // 10), obtendrás 75, que es el número sin el último dígito.
 
 
-def imprimir_multiplos_de_tres(inicio, fin, paso):
-     suma = 0
-     for num in range(inicio, fin, paso):
-        ultimo_digito = 0 #...  
-        if ultimo_digito != 5:
-            suma -= num
-     return clasificacion_de_Numeros(int(suma))
+def imprimir_multiplos_de_tres():
+        lista1=[]
+        st = 0
+        for i in range(20):
+            while st <= 21:
+                st = st+3
+                lista1.append(st)
+                for x in lista1:
+                     if x %10 == 6:
+                          lista1.remove(x)
+                total = sum(lista1)
+        
+        categorizar_numero(total)     
+        
+
+imprimir_multiplos_de_tres()
+
 
 # LLAMANDO METODOS
 
 def main():
-    resultado_reto1 = clasificacion_de_Numeros(?)
-    # resultado_reto3 = imprimir_multiplos_de_tres(3, 21, 3)
-    # resultado_reto2 = analizar_nombres(lenguajes)
-    # codigo_ganador = str(resultado_reto?) + str(resultado...
-    # print(cesar.traduccion_cesar(codigo_ganador))
+     resultado_reto1 = categorizar_numero(40)
+     resultado_reto3 = imprimir_multiplos_de_tres()
+     resultado_reto2 = analizar_nombres(lenguajes)
+     codigo_ganador = str(resultado_reto1) + str(resultado_reto2)+str(resultado_reto3)
+     print(cesar.traduccion_cesar(codigo_ganador))
 
 
 if __name__ == "__main__":
     main()
-
